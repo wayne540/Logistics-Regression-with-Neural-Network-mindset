@@ -69,7 +69,7 @@ Calculate the cost function `( J )`, which is the sum of all losses divided by t
 
 `J = (1/m) * Σ L(a(i), y(i))`
 
-To minimize the cost function, compute the gradients for parameters \( \frac{\partial J}{\partial w} \) and \( \frac{\partial J}{\partial b} \) using the chain rule of calculus.
+To minimize the cost function, compute the gradients for parameters `dJ/dw`  and `dJ/db` using the chain rule of calculus.
 
 Use gradient descent to update the parameters **w** and **b**.
 
@@ -105,7 +105,14 @@ Here “\( .T \)” stands for Transpose.
 
 `dJ/db = (1/m) * Σ (a(i) − y(i))`
 
+6. ** Parameters update rule **
+   
+`w = w − α * (dJ/dw)`
 
+`b = b − α * (dJ/db)`
+Note, we will be implementing vectorization, meaning instead of looping through each 209 training example, which will slow thing down, we will combine them, using numpy library. The below image should give a better understanding how dimensions of the numpy array should like.
+
+![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image7.png)
 
 
 
