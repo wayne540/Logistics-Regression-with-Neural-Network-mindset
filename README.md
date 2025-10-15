@@ -165,7 +165,7 @@ def propagate(w, b, X, Y):
 
 Once a cost is received, we need to minimize the cost, pretty much just reducing errors. This is done by computing gradient for the parameters using the chain rule of calculus. The graph below shows the intuition behind gradient descent in search of the cost minimum. The ball going down the hill fast or slow, depending on the learning rate you choose to apply to it. Think of this ball seeking for the best parameter to learn your data effectively.
 
-![Sigmoid Function](images/image8 .png)
+![Sigmoid Function](images/image8900.png)
 
 Computional graph for gradient descent
 
