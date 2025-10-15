@@ -23,7 +23,7 @@ To get a good intuition through practical, I will be using a problem set from An
 
 I will try to give a step by step instructions for the coding of the problem set. The full code can also be found on my Github, the link will be attached. First, we want to import all the necessary packages.
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image3.png)
+![Sigmoid Function](images/image3.png)
 
 Next is to preprocess the data. I will be using an h5 file containing images of cats and other images that are non-cats. [Cat Dataset on Kaggle](https://www.kaggle.com/datasets/crawford/cat-dataset)
  to the Cat dataset. We are working with 209 training and 50 test examples, and a pixels value of 64 x 64 x 3, which is not much to let our model reach its full potential to learn, but it will do for the sake of intuition. The number I just stated are the values that represent the images of the dataset. The images will be the input we feed into our logistics regression. An image is a 3-dimensional matrix that holds pixel intensity values of Red, Green, and Blue channel. In order to feed it into our network, we will convert this image (3d-matrix ) to a 1d-matrix, vector.
