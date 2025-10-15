@@ -6,7 +6,7 @@ The classic application of Logistics regression is binary classification. Logist
 
 It is quite common to use the Logistic sigmoid function as an Activation function. It is more advisable as you get into a deep neural network to use it ONLY for the Output layers. Logistic regression takes an input, passes it through a sigmoid function, then returns an output of probability between 0 and 1. This sigmoid function is responsible for classifying the input.
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image2.png)
+![Sigmoid Function](images/image2.png)
 
 Ok, I think some visible codes will reveal the notion much better.
 To get a good intuition through practical, I will be using a problem set from Andrew Ng Deep Learning AI. We will be building a simple image-recognition algorithm that can correctly classify pictures as cat or non-cat. Before I go forward, you will need to have some basic understanding of the following or else it might seem like a foreign language.
