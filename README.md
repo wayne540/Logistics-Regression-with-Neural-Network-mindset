@@ -29,7 +29,7 @@ Next is to preprocess the data. I will be using an h5 file containing images of 
  to the Cat dataset. We are working with 209 training and 50 test examples, and a pixels value of 64 x 64 x 3, which is not much to let our model reach its full potential to learn, but it will do for the sake of intuition. The number I just stated are the values that represent the images of the dataset. The images will be the input we feed into our logistics regression. An image is a 3-dimensional matrix that holds pixel intensity values of Red, Green, and Blue channel. In order to feed it into our network, we will convert this image (3d-matrix ) to a 1d-matrix, vector.
 A single train image is of dimension [64, 64, 3] where 64, is the width, 64 is the height and 3 is the number of channels, when flattened to a 1-dim image, we get [1, 12288]. The image below should help you understand better.
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image4.png)
+![Sigmoid Function](images/image4.png)
 
 Moving forward, we know a flattened vector will have a dimension [1, 12288], note that we have 209 training examples and 50 test examples. Thus we will end up having:
 
@@ -43,11 +43,11 @@ Moving forward, we know a flattened vector will have a dimension [1, 12288], not
 
 After flattening our image, we Standardize. One common preprocessing step in machine learning is to center and standardize your dataset, meaning that you subtract the mean of the whole numpy array from each example, and then divide each example by the standard deviation of the whole numpy array. But for picture datasets, it is simpler and more convenient and works almost as well to just divide every row of the dataset by 255 (the maximum value of a pixel channel). A quick recap of the first segment : Figure out the dimensions and shapes of the problem (m_train, m_test, num_px, …). Reshape the datasets such that each example is now a vector of size (num_px * num_px * 3, 1). “Standardize” the data.
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image5.png)
+![Sigmoid Function](images/image5.png)
 
 Our data has been preprocessed. Let’s get to building our logistics regression model that will classify cats. Remember the idea here is to understand the mindset of Neural Networks using Logistics Regression. LR is pretty much a one-layer neural network
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image6.png)
+![Sigmoid Function](images/image6.png)
 
 Let me explains some basic concepts in regard to the above image.
 Neuron- a neuron(where we have w x +b, within the circle in the above image) in deep learning, is a biologically inspired representation of a neuron inside the human brain. Similar to a neuron in the human brain, an artificial neuron accepts inputs from some other neurons and fires a value to the next set of artificial neurons. Inside a single neuron, two computations are performed. Weighted and Activation.
@@ -112,7 +112,7 @@ Here “\( .T \)” stands for Transpose.
 `b = b − α * (dJ/db)`
 Note, we will be implementing vectorization, meaning instead of looping through each 209 training example, which will slow thing down, we will combine them, using numpy library. The below image should give a better understanding how dimensions of the numpy array should like.
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image7.png)
+![Sigmoid Function](images/image7.png)
 
 I know everything can seems a little too much at once, I’ll advise to go over it a couple of a times and also once it implemented in code, you should get a better understanding.
 Lets code:
@@ -165,11 +165,11 @@ def propagate(w, b, X, Y):
 
 Once a cost is received, we need to minimize the cost, pretty much just reducing errors. This is done by computing gradient for the parameters using the chain rule of calculus. The graph below shows the intuition behind gradient descent in search of the cost minimum. The ball going down the hill fast or slow, depending on the learning rate you choose to apply to it. Think of this ball seeking for the best parameter to learn your data effectively.
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image8.png)
+![Sigmoid Function](images/image8.png)
 
 Computional graph for gradient descent
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image9.png)
+![Sigmoid Function](images/image9.png)
 
 OK apologizes if any headache. Let's get back to coding. Optimization
 •	You have initialized your parameters.
