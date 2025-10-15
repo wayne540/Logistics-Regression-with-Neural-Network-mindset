@@ -254,7 +254,7 @@ def model(X_train, Y_train, X_test, Y_test, epochs, lr):
 Finally, we can train our model using the below code. This produces the training accuracy and test accuracy for the dataset.
 `myModel = model(train_x, train_y, test_x, test_y, epochs, lr)`
 And that's a wrap! Thanks for going all the way through. Continue your journey to always learning, it’s never-ending process.
-NOTE: Copying and Pasting the code could give you some problems, due to indention, python is very sensitive to indention. The full code link. Also, you should download the [Cat Dataset on Kaggle](https://www.kaggle.com/datasets/crawford/cat-dataset) if you decide to practice on your own.
+NOTE: Copying and Pasting the code could give you some problems, due to indention, python is very sensitive to indention. The full [code](logisticRegression.py) link. Also, you should download the [Cat Dataset on Kaggle](https://www.kaggle.com/datasets/crawford/cat-dataset) if you decide to practice on your own.
 
 ##  Conclusion
 
