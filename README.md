@@ -171,3 +171,90 @@ Computional graph for gradient descent
 
 ![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image9.png)
 
+OK apologizes if any headache. Let's get back to coding. Optimization
+•	You have initialized your parameters.
+
+•	You are also able to compute a cost function and its gradient.
+
+•	Now, you want to update the parameters using gradient descent.
+
+```
+def optimize(w, b, X, Y, epochs, lr):
+	costs = []
+	for i in range(epochs):
+		# calculate gradients
+		grads, cost = propagate(w, b, X, Y)
+
+		# get gradients
+		dw = grads["dw"]
+		db = grads["db"]
+
+		# update rule
+		w = w - (lr*dw)
+		b = b - (lr*db)
+
+		if i % 100 == 0:
+			costs.append(cost)
+			print("cost after %i epochs: %f" %(i, cost))
+
+	# param dict
+	params = {"w": w, "b": b}
+
+	# gradient dict
+	grads  = {"dw": dw, "db": db}
+
+	return params, grads, costs
+```
+
+Calculate Ŷ = A = σ(wᵀX + b)
+Convert the entries of a into `0` `(if activation <= 0.5)` or `1` `(if activation > 0.5)`, stores the predictions in a vector `Y_prediction`. If you wish, you can use an `if/else` statement in a `for` loop (though there is also a way to vectorize this).
+
+```
+def predict(w, b, X):
+	m = X.shape[1]
+	Y_predict = np.zeros((1,m))
+	w = w.reshape(X.shape[0], 1)
+
+	A = sigmoid(np.dot(w.T, X) + b)
+
+	for i in range(A.shape[1]):
+		if A[0, i] <= 0.5:
+			Y_predict[0, i] = 0
+		else:
+			Y_predict[0,i]  = 1
+
+	return Y_predict
+```
+Now lets merge all function into a model
+```
+def model(X_train, Y_train, X_test, Y_test, epochs, lr):
+	w, b = init_params(X_train.shape[0])
+	params, grads, costs = optimize(w, b, X_train, Y_train, epochs, lr)
+
+	w = params["w"]
+	b = params["b"]
+
+	Y_predict_train = predict(w, b, X_train)
+	Y_predict_test  = predict(w, b, X_test)
+
+	print("train_accuracy: {} %".format(100-np.mean(np.abs(Y_predict_train - Y_train)) * 100))
+	print("test_accuracy : {} %".format(100-np.mean(np.abs(Y_predict_test  - Y_test)) * 100))
+
+	log_reg_model = {"costs": costs,
+	"Y_predict_test": Y_predict_test, 
+	"Y_predict_train" : Y_predict_train, 
+	"w" : w, 
+	"b" : b,
+	"learning_rate" : lr,
+	"epochs": epochs}
+
+	return log_reg_model
+```
+### Training the model
+Finally, we can train our model using the below code. This produces the training accuracy and test accuracy for the dataset.
+`myModel = model(train_x, train_y, test_x, test_y, epochs, lr)`
+And that's a wrap! Thanks for going all the way through. Continue your journey to always learning, it’s never-ending process.
+NOTE: Copying and Pasting the code could give you some problems, due to indention, python is very sensitive to indention. The full code link. Also, you should download the [Cat Dataset on Kaggle](https://www.kaggle.com/datasets/crawford/cat-dataset) if you decide to practice on your own.
+
+
+
