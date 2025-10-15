@@ -275,15 +275,12 @@ By training and evaluating the model on the **Cats vs Non-Cats dataset**, we ach
 
 Below is an illustration of the **model’s output accuracy** after training:
 
-<p align="center">
-  ![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/sample output.png)
-</p>
+![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/sample output.png)
 
 _**Figure:** Sample output showing training and testing accuracy from the implemented logistic regression model._
 
 ---
-
-> The journey from logistic regression to neural networks marks the beginning of a deeper exploration into **Deep Learning**, where multiple layers of such neurons are stacked to form powerful predictive systems. Continuous learning, experimentation, and curiosity remain key to mastering these concepts.
+The journey from logistic regression to neural networks marks the beginning of a deeper exploration into **Deep Learning**, where multiple layers of such neurons are stacked to form powerful predictive systems. Continuous learning, experimentation, and curiosity remain key to mastering these concepts.
 
 
 
