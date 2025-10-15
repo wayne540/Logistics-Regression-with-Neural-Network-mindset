@@ -275,7 +275,7 @@ By training and evaluating the model on the **Cats vs Non-Cats dataset**, we ach
 
 Below is an illustration of the **model’s output accuracy** after training:
 
-![Sample Output](images/image6.png)
+![Sample Output](images/sample output.png)
 
 _**Figure:** Sample output showing training and testing accuracy from the implemented logistic regression model._
 
