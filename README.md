@@ -275,7 +275,7 @@ By training and evaluating the model on the **Cats vs Non-Cats dataset**, we ach
 
 Below is an illustration of the **model’s output accuracy** after training:
 
-![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/sample output.png)
+![Sample Output](images/image6.png)
 
 _**Figure:** Sample output showing training and testing accuracy from the implemented logistic regression model._
 
