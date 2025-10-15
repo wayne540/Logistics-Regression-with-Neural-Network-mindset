@@ -114,5 +114,21 @@ Note, we will be implementing vectorization, meaning instead of looping through 
 
 ![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image7.png)
 
+I know everything can seems a little too much at once, I’ll advise to go over it a couple of a times and also once it implemented in code, you should get a better understanding.
+Lets code:
+Let’s build our helper function- sigmoid.
+```
+def sigmoid(z):
+    """
+    Compute the sigmoid of z    Arguments:
+    z -- A scalar or numpy array of any size.    Return:
+    s -- sigmoid(z)
+    """    ### START CODE HERE ### (≈ 1 line of code)
+    s = 1/(1 + np.exp(-z))
+    ### END CODE HERE ###
+    
+    return s
+```
+
 
 
