@@ -129,6 +129,45 @@ def sigmoid(z):
     
     return s
 ```
+Next, Initialize the weights w and biases b to random values
+```
+def initialize_with_zeros(dim):
+    """
+    This function creates a vector of zeros of shape (dim, 1) for w and initializes b to 0.
+    
+    Argument:
+    dim -- size of the w vector we want (or number of parameters in this case)
+    
+    Returns:
+    w -- initialized vector of shape (dim, 1)
+    b -- initialized scalar (corresponds to the bias)
+    """
+    
+    ### START CODE HERE ### (≈ 1 line of code)
+    w = np.zeros((dim, 1))
+    b = 0
+    ### END CODE HERE ###    
+    return w, b
+```
+Now that your parameters are initialized, you can do the “forward” and “backward” propagation steps for learning the parameters.
 
+```
+def propagate(w, b, X, Y):
+	# num of training samples
+	m = X.shape[1]	# forward pass
+	A    = sigmoid(np.dot(w.T,X) + b)
+	cost = (-1/m)*(np.sum(np.multiply(Y,np.log(A)) + np.multiply((1-Y),np.log(1-A))))	# back propagation
+	dw = (1/m)*(np.dot(X, (A-Y).T))
+	db = (1/m)*(np.sum(A-Y))
+ cost = np.squeeze(cost)	# gradient dictionary
+	grads = {"dw": dw, "db": db}	return grads, cost
+```
 
+Once a cost is received, we need to minimize the cost, pretty much just reducing errors. This is done by computing gradient for the parameters using the chain rule of calculus. The graph below shows the intuition behind gradient descent in search of the cost minimum. The ball going down the hill fast or slow, depending on the learning rate you choose to apply to it. Think of this ball seeking for the best parameter to learn your data effectively.
+
+![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image8.png)
+
+Computional graph for gradient descent
+
+![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/image9.png)
 
