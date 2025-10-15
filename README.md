@@ -87,15 +87,25 @@ Here “\( .T \)” stands for Transpose.
 
 2. **Activation of the ith training example (using sigmoid):**
 
-y′(i) = a(i) = σ(z(i)) = 1 / (1 + e^(−z(i)))
+`y′(i) = a(i) = σ(z(i)) = 1 / (1 + e^(−z(i)))`
 
 3. **Loss function of the ith training example:**
 
-L(a(i), y(i)) = −y(i)log(a(i)) − (1 − y(i))log(1 − a(i))
+`L(a(i), y(i)) = −y(i)log(a(i)) − (1 − y(i))log(1 − a(i))`
 
 4. **Cost function for all training examples:**
 
-J = (1/m) * Σ[i=1 to m] L(a(i), y(i))
+`J = (1/m) * Σ L(a(i), y(i))`
+
+`J = −(1/m) * Σ [ y(i)log(a(i)) + (1 − y(i))log(1 − a(i)) ]`
+
+5. ** Gradient Descent w.r.t cost function, weights and bias **
+
+`dJ/dw = (1/m) * X(A − Y)ᵀ`
+
+`dJ/db = (1/m) * Σ (a(i) − y(i))`
+
+
 
 
 
