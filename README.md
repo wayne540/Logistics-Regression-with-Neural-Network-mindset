@@ -256,5 +256,35 @@ Finally, we can train our model using the below code. This produces the training
 And that's a wrap! Thanks for going all the way through. Continue your journey to always learning, it’s never-ending process.
 NOTE: Copying and Pasting the code could give you some problems, due to indention, python is very sensitive to indention. The full code link. Also, you should download the [Cat Dataset on Kaggle](https://www.kaggle.com/datasets/crawford/cat-dataset) if you decide to practice on your own.
 
+##  Conclusion
+
+Through this project, we have successfully implemented **Logistic Regression** using a **Neural Network mindset**, gaining a deeper understanding of how fundamental machine learning concepts connect to the architecture of neural networks.
+
+We began by analyzing the logistic (sigmoid) function and understanding how it transforms linear inputs into probabilities suitable for binary classification tasks.  
+The implementation included:
+- Preprocessing image data into standardized input vectors,  
+- Computing forward and backward propagation,  
+- Deriving cost and gradient descent equations, and  
+- Updating parameters iteratively to minimize loss and improve accuracy.
+
+By training and evaluating the model on the **Cats vs Non-Cats dataset**, we achieved meaningful predictions that demonstrate the effectiveness of logistic regression as a foundational neural network.
+
+---
+
+###  Sample Output
+
+Below is an illustration of the **model’s output accuracy** after training:
+
+<p align="center">
+  ![Sigmoid Function](https://raw.githubusercontent.com/wayne540/Logistics-Regression-with-Neural-Network-mindset/main/images/sample output.png)
+</p>
+
+_**Figure:** Sample output showing training and testing accuracy from the implemented logistic regression model._
+
+---
+
+> The journey from logistic regression to neural networks marks the beginning of a deeper exploration into **Deep Learning**, where multiple layers of such neurons are stacked to form powerful predictive systems. Continuous learning, experimentation, and curiosity remain key to mastering these concepts.
+
+
 
 
